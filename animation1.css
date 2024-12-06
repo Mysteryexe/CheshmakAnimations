@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  background-color: black;
+  width: 50vw;
+  height: 100vh;
+  top: 0;
+  animation: moveToCenter 1s ease-in-out forwards;
+}
+
+.shape.left {
+  left: 0vw;
+  transform: translateX(-50vw);
+}
+
+.shape.right {
+  right: 0vw;
+  transform: translateX(50vw);
+}
+
+@keyframes moveToCenter {
+  to {
+    transform: translateX(0);
+  }
+}
